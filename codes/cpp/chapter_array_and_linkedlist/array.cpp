@@ -50,9 +50,15 @@ void remove(int *nums, int size, int index) {
 /* 遍历数组 */
 void traverse(int *nums, int size) {
     int count = 0;
+
     // 通过索引遍历数组
     for (int i = 0; i < size; i++) {
         count += nums[i];
+    }
+
+    // 使用范围-based for 循环直接遍历获取数组中的每个元素
+    for (int num : nums) {
+        count += num;
     }
 }
 
